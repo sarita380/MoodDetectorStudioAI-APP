@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Recording": {
+      "title": "Recording",
+      "description": "A recorded emotional vocal session",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The Firebase Auth UID of the user who made the recording"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the recording was completed"
+        },
+        "vibe": {
+          "type": "string",
+          "description": "The primary emotional tone of the recording (e.g. Calm, Anxious, Excited, Fatigued)"
+        },
+        "vibeScore": {
+          "type": "integer",
+          "description": "The numeric score of the vibe intensity, from 1 to 10"
+        },
+        "summary": {
+          "type": "string",
+          "description": "A 1-sentence explanation of the emotional state"
+        },
+        "transcript": {
+          "type": "string",
+          "description": "The full transcribed text of the recording"
+        }
+      },
+      "required": ["userId", "timestamp", "vibe", "vibeScore", "summary", "transcript"]
+    }
+  },
+  "firestore": {
+    "recordings/{recordingId}": {
+      "schema": "Recording",
+      "description": "Vibe recordings and emotional tracking history"
+    }
+  }
+}

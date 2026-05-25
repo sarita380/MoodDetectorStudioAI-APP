@@ -1,0 +1,6 @@
+{
+  "name": "VIBE-SYNTH",
+  "description": "Futuristic mood tracker assessing human emotional tone trends via real-time audio analysis.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
